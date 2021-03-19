@@ -42,10 +42,13 @@ class Obstacle:
         """
 
         # Draw circle
-        circle = plt_patches.Circle(
-            xy=(self.cx, self.cy), radius=self.radius, color=OBSTACLE, zorder=20)
+        circle = plt_patches.Circle(xy=(self.cx, self.cy), radius=
+                                        self.radius, color=OBSTACLE, zorder=20)
+        rec = plt_patches.Rectangle(xy=(self.cx - self.radius/2 , self.cy- self.radius/2), width=self.radius, height=self.radius,
+                                     zorder=20)
         ax = plt.gca()
-        ax.add_patch(circle)
+        #ax.add_patch(circle)
+        ax.add_patch(rec)
 
 
 #######
